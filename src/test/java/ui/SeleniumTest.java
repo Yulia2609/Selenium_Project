@@ -3,14 +3,12 @@ package ui;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.testng.Assert.assertTrue;
 
 public class SeleniumTest {
@@ -45,7 +43,7 @@ public class SeleniumTest {
             driver.switchTo().frame(frameElement);
         }
 
-        String actualHeading = driver.findElement(By.cssSelector("h1.display-6")).getText();
-        Assertions.assertTrue(actualHeading.contains(headerName), "Header should contain text" + headerName);
+        String actualHeader = driver.findElement(By.cssSelector("h1.display-6")).getText();
+        Assertions.assertTrue(actualHeader.contains(headerName), "Header should contain text" + headerName);
     }
 }
